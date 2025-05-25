@@ -12,7 +12,7 @@ resource "aws_iam_user" "jenkins_pipeline_user" {
 
 resource "aws_iam_user_policy_attachment" "jenkins_attach_policy" {
   user       = aws_iam_user.jenkins_pipeline_user.name
-  policy_arn = "arn:as:iam::aws:policy/AdministratorAccess"
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
 resource "aws_iam_access_key" "jenkins_user_key" {
